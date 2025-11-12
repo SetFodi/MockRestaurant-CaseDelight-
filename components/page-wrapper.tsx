@@ -15,7 +15,7 @@ export function PageWrapper({ children }: PropsWithChildren) {
   return (
     <motion.main
       key={pathname}
-      initial={{ opacity: 0, y: 24 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -24 }}
       transition={{ duration: 0.55, ease: [0.22, 0.61, 0.36, 1] }}

@@ -9,7 +9,7 @@ export function ReservationCTA() {
   return (
     <section
       id="reservations"
-      className="relative mx-auto mt-12 w-full max-w-5xl overflow-hidden rounded-[2.5rem] border border-white/25 bg-black/85 px-6 py-12 text-white shadow-2xl backdrop-blur lg:px-16"
+      className="relative mx-auto mt-12 w-full max-w-5xl overflow-hidden rounded-[2.5rem] border border-black/10 dark:border-white/25 bg-gradient-to-br from-black/95 via-black/90 to-black/95 dark:from-black/85 dark:via-black/85 dark:to-black/85 px-6 py-12 text-white shadow-2xl backdrop-blur lg:px-16"
     >
       <motion.div
         aria-hidden
@@ -28,16 +28,16 @@ export function ReservationCTA() {
 
       <div className="relative flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
         <div className="space-y-4 lg:max-w-lg">
-          <p className="eyebrow text-amber-300/80">Reserve your evening</p>
-          <h2 className="font-serif text-4xl tracking-[0.08em]">
-            Secure the chef’s table or a private salon.
+          <p className="eyebrow text-amber-300/80 dark:text-amber-300/80">Reserve your evening</p>
+          <h2 className="font-serif text-4xl tracking-[0.08em] text-white dark:text-white">
+            Secure the chef's table or a private salon.
           </h2>
-          <p className="max-w-md text-sm text-white/70">
+          <p className="max-w-md text-sm text-white/70 dark:text-white/70">
             Our concierge will follow up within the hour to craft a bespoke menu,
             wine journey, and ambiance to match your celebration.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-xs uppercase tracking-[0.3em] text-white/60">
+        <div className="flex flex-col gap-4 text-xs uppercase tracking-[0.3em] text-white/60 dark:text-white/60">
           <p>Reservations: +995 555 123 456</p>
           <p>Concierge: concierge@casadelight.com</p>
           <AnimatedButton

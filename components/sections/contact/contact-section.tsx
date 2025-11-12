@@ -31,7 +31,10 @@ export function ContactSection() {
             <h1 className="section-heading">
               Tell us about the evening you imagine.
             </h1>
-            <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+            <p
+              className="text-sm leading-relaxed opacity-90 dark:opacity-70"
+              style={{ color: "var(--foreground)" }}
+            >
               Share your celebration details, party size, and preferred date. Our
               concierge replies within the hour to weave together menu, wine, and
               ambience tailored to your gathering.
@@ -157,7 +160,7 @@ function ContactDetail({ icon, title, value, href }: ContactDetailProps) {
   return (
     <a
       href={href}
-      className="flex items-center gap-3 overflow-hidden rounded-2xl border border-white/15 bg-white/40 px-4 py-3 text-sm text-black/70 transition hover:border-amber-400 hover:bg-white/60 dark:border-white/10 dark:bg-black/40 dark:text-white/70 dark:hover:border-amber-300"
+      className="flex items-center gap-3 overflow-hidden rounded-2xl border border-white/15 bg-white/40 px-4 py-3 text-sm text-black transition hover:border-amber-400 hover:bg-white/60 dark:border-white/10 dark:bg-black/40 dark:text-white/70 dark:hover:border-amber-300"
     >
       <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-200/40 text-amber-700 dark:bg-amber-400/20 dark:text-amber-200">
         {icon}

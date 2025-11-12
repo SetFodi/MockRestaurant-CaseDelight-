@@ -17,7 +17,10 @@ export function Experiences() {
             Crafted for connoisseurs who savor detail.
           </h2>
         </div>
-        <p className="max-w-md text-sm leading-relaxed text-black/70 dark:text-white/70">
+        <p
+          className="max-w-md text-sm leading-relaxed opacity-90 dark:opacity-70"
+          style={{ color: "var(--foreground)" }}
+        >
           Each Casa Delight experience weaves ancient Georgian techniques with
           contemporary craft. Expect tableside storytelling, theatrical reveals,
           and impeccable pacing attuned to your evening.
@@ -37,14 +40,20 @@ export function Experiences() {
                 "card-surface relative h-full rounded-3xl border border-white/25 bg-white/70 backdrop-blur dark:bg-zinc-900/70"
               )}
             >
-              <div className="absolute -right-4 top-4 hidden h-12 w-12 items-center justify-center rounded-full border border-amber-200 bg-amber-100/60 font-serif text-xl text-amber-700 shadow-lg sm:flex">
+              <div className="absolute -right-4 top-4 hidden h-12 w-12 items-center justify-center rounded-full border border-amber-300 dark:border-amber-200 bg-amber-100 dark:bg-amber-100/60 font-serif text-xl text-amber-900 dark:text-amber-700 shadow-lg sm:flex">
                 0{index + 1}
               </div>
               <div className="space-y-4">
-                <h3 className="font-serif text-2xl tracking-[0.05em] text-black dark:text-white">
+                <h3
+                  className="font-serif text-2xl tracking-[0.05em]"
+                  style={{ color: "var(--foreground)" }}
+                >
                   {experience.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+                <p
+                  className="text-sm leading-relaxed opacity-90 dark:opacity-70"
+                  style={{ color: "var(--foreground)" }}
+                >
                   {experience.description}
                 </p>
               </div>

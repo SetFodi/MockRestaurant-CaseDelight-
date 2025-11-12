@@ -18,7 +18,7 @@ export function Footer() {
           <p className="text-sm uppercase tracking-[0.42em] text-white/60">
             Casa Delight
           </p>
-          <h2 className="font-serif text-4xl tracking-[0.12em]">
+          <h2 className="font-serif text-4xl tracking-[0.12em] text-white">
             Taste the Experience
             <span aria-hidden className="text-amber-300"> →</span>
           </h2>

@@ -16,14 +16,20 @@ export function StorySection() {
             <h1 className="section-heading">
               From Kakheti vineyards to a cinematic urban dining room.
             </h1>
-            <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+            <p
+              className="text-sm leading-relaxed opacity-90 dark:opacity-70"
+              style={{ color: "var(--foreground)" }}
+            >
               Casa Delight began as a three-generation family passion for
               winemaking. Guided by Executive Chef Elene Mdivani, we reinterpret
-              Georgia’s pantry with modern expression—aging sauces in qvevri,
+              Georgia's pantry with modern expression—aging sauces in qvevri,
               cold-smoking cheeses over cherrywood, and plating with theatrical
               flair.
             </p>
-            <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+            <p
+              className="text-sm leading-relaxed opacity-90 dark:opacity-70"
+              style={{ color: "var(--foreground)" }}
+            >
               Our salon envelopes guests in warm lighting, tactile textures, and
               curated jazz—inviting evenings that stretch into intimate hours.
               Every service is choreographed by our guest experience director to
@@ -51,7 +57,7 @@ export function StorySection() {
               <p className="text-xs uppercase tracking-[0.4em] text-white/60">
                 Est. 2011 · Tbilisi
               </p>
-              <p className="text-base font-semibold tracking-[0.3em]">
+              <p className="text-base font-semibold tracking-[0.3em] text-white">
                 Crafted Warmth
               </p>
             </div>

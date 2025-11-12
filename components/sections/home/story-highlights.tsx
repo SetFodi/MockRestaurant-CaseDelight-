@@ -39,10 +39,10 @@ export function StoryHighlights() {
                   </p>
                 </div>
                 <div className="space-y-3 px-6 py-8">
-                  <h3 className="font-serif text-2xl tracking-[0.05em]">
+                  <h3 className="font-serif text-2xl tracking-[0.05em] text-black dark:text-white">
                     {highlight.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+                  <p className="text-sm leading-relaxed text-black dark:text-white/70">
                     {highlight.description}
                   </p>
                 </div>

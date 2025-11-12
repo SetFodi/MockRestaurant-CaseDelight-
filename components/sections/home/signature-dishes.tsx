@@ -23,7 +23,10 @@ export function SignatureDishes() {
             Georgian icons, interpreted with modern elegance.
           </h2>
         </div>
-        <p className="max-w-md text-sm leading-relaxed text-black/70 dark:text-white/70">
+        <p
+          className="max-w-md text-sm leading-relaxed opacity-90 dark:opacity-70"
+          style={{ color: "var(--foreground)" }}
+        >
           Ingredients sourced from small-batch Georgian producers meet cutting-edge culinary technique. Each plate celebrates contrasts of texture, temperature, and aroma.
         </p>
       </div>
@@ -52,13 +55,13 @@ export function SignatureDishes() {
                 </span>
               </div>
               <div className="space-y-3 px-6 py-6">
-                <h3 className="font-serif text-2xl tracking-[0.04em] text-black dark:text-white">
+                <h3 className="font-serif text-2xl tracking-[0.04em] text-gray-900 dark:text-white">
                   {dish.name}
                 </h3>
-                <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+                <p className="text-sm leading-relaxed text-gray-800 dark:text-white/70">
                   {dish.description}
                 </p>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-600 dark:text-amber-300">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-700 dark:text-amber-300">
                   {dish.price}
                 </p>
               </div>

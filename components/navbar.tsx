@@ -36,15 +36,16 @@ export function Navbar() {
 
   const activePath = useMemo(() => {
     if (pathname === "/") return "/";
-    return (
-      navLinks.find((link) => pathname.startsWith(link.href))?.href ?? "/"
-    );
+    const match = navLinks
+      .filter((link) => link.href !== "/")
+      .find((link) => pathname === link.href || pathname.startsWith(`${link.href}/`));
+    return match?.href ?? "/";
   }, [pathname]);
 
   return (
     <motion.header
-      style={{ backgroundColor, borderBottomColor }}
-      className="fixed inset-x-0 top-0 z-40 border-b border-white/10 backdrop-blur-xl"
+      style={{ borderBottomColor }}
+      className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-black/30 dark:bg-black/60"
     >
       <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
         <Link
@@ -70,7 +71,7 @@ export function Navbar() {
                 <Link
                   href={link.href}
                   className={clsx(
-                    "transition-colors duration-200 hover:text-white",
+                    "transition-colors duration-200 hover:text-white focus:outline-none focus-visible:outline-none",
                     isActive ? "text-white" : "text-white/70"
                   )}
                 >
@@ -134,7 +135,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={clsx(
-                      "rounded-xl px-4 py-3 transition",
+                      "rounded-xl px-4 py-3 transition focus:outline-none focus-visible:outline-none",
                       isActive
                         ? "bg-white/10 text-white"
                         : "text-white/70 hover:bg-white/5 hover:text-white"

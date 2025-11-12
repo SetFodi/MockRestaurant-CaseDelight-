@@ -48,7 +48,7 @@ export function ExperienceTimeline() {
                   <p className="font-serif text-xl text-black dark:text-white">
                     {item.title}
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed">
+                  <p className="mt-2 text-sm leading-relaxed text-black dark:text-white/70">
                     {item.description}
                   </p>
                 </div>

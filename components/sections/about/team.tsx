@@ -15,7 +15,10 @@ export function TeamSection() {
           <p className="eyebrow text-amber-500/70">Our Artisans</p>
           <h2 className="section-heading">A collective of Georgian storytellers.</h2>
         </div>
-        <p className="max-w-md text-sm leading-relaxed text-black/70 dark:text-white/70">
+        <p
+          className="max-w-md text-sm leading-relaxed opacity-90 dark:opacity-70"
+          style={{ color: "var(--foreground)" }}
+        >
           From the kitchen brigade to sommeliers and hosts, Casa Delight is powered by artisans who turn every moment into theatre—sharing the warmth of our homeland with precision.
         </p>
       </div>
@@ -48,7 +51,10 @@ export function TeamSection() {
                     {member.role}
                   </p>
                 </div>
-                <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+                <p
+                  className="text-sm leading-relaxed opacity-90 dark:opacity-70"
+                  style={{ color: "var(--foreground)" }}
+                >
                   {member.bio}
                 </p>
               </div>

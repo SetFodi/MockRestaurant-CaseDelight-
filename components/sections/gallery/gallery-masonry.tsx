@@ -28,8 +28,11 @@ export function GalleryMasonry() {
             Moments that linger long after the final toast.
           </h1>
         </div>
-        <p className="max-w-md text-sm leading-relaxed text-black/70 dark:text-white/70">
-          Step inside Casa Delight’s illuminated salons, chef’s table, and wine
+        <p
+          className="max-w-md text-sm leading-relaxed opacity-90 dark:opacity-70"
+          style={{ color: "var(--foreground)" }}
+        >
+          Step inside Casa Delight's illuminated salons, chef's table, and wine
           library. Each gallery capture embraces warm lighting and cinematic
           textures.
         </p>

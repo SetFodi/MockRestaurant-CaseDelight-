@@ -26,18 +26,18 @@ export function Hero() {
         <div className="absolute inset-0 backdrop-blur-[2px]" />
       </motion.div>
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 text-white lg:flex-row lg:items-center lg:gap-16 lg:px-10">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
           className="glass-panel glow-ring max-w-2xl px-8 py-10 text-balance shadow-2xl lg:px-10"
         >
-          <p className="eyebrow text-black/50 dark:text-white/50">Tbilisi · Rustaveli Avenue</p>
-          <h1 className="section-heading mt-6 text-black dark:text-white">
+          <p className="eyebrow text-white/50">Tbilisi · Rustaveli Avenue</p>
+          <h1 className="section-heading mt-6 text-white">
             Taste the Art of Fine Dining
           </h1>
-          <p className="description mt-4 text-black/80 dark:text-white/80">
+          <p className="description mt-4 text-white/80">
             A cinematic culinary house celebrating Georgian heritage through
             modern craftsmanship. Every seating becomes a multi-sensory story
             guided by Chef Elene Mdivani and our wine artisans.
@@ -88,9 +88,9 @@ export function Hero() {
                     ? undefined
                     : { scale: 1.02, translateY: -4 }
                 }
-                className="glass-panel flex h-full flex-col gap-2 rounded-3xl border border-white/15 bg-white/10 p-5 text-black/80 dark:text-white/80 backdrop-blur"
+                className="flex h-full flex-col gap-2 rounded-3xl border border-black/10 dark:border-white/15 bg-white/90 dark:bg-black/20 p-5 backdrop-blur shadow-xl"
               >
-                <p className="text-xs uppercase tracking-[0.28em] text-amber-200/90">
+                <p className="text-xs uppercase tracking-[0.28em] text-amber-700 dark:text-amber-200">
                   {item.label}
                 </p>
                 <p className="text-base font-semibold text-black dark:text-white">

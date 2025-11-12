@@ -32,7 +32,10 @@ export function MenuGrid() {
             Georgian soul, reimagined for modern palates.
           </h1>
         </div>
-        <p className="max-w-md text-sm leading-relaxed text-black/70 dark:text-white/70">
+        <p
+          className="max-w-md text-sm leading-relaxed opacity-90 dark:opacity-70"
+          style={{ color: "var(--foreground)" }}
+        >
           Each dish honors the regions of Georgia. Savor house-fermented sauces,
           wood-fired breads, seasonal produce, and cellar-aged qvevri wines.
         </p>
@@ -44,17 +47,18 @@ export function MenuGrid() {
             key={item}
             onClick={() => setCategory(item as MenuCategory | "All")}
             className={clsx(
-              "rounded-full border px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] transition backdrop-blur",
+              "rounded-full border-2 px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] transition backdrop-blur",
               category === item
-                ? "border-amber-400 bg-amber-300/20 text-amber-800 dark:text-amber-200"
-                : "border-black/10 bg-white/40 text-black/60 hover:border-black/30 hover:text-black dark:border-white/15 dark:bg-white/10 dark:text-white/60 dark:hover:text-white"
+                ? "border-amber-600 bg-amber-300/25"
+                : "border-black/60 bg-white/85 hover:border-black/80 dark:border-white/30 dark:bg-white/10"
             )}
+            style={category === item ? undefined : { borderColor: "var(--foreground)" }}
             whileHover={
               prefersReducedMotion ? undefined : { scale: 1.05, y: -2 }
             }
             whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
           >
-            {item}
+            <span style={{ color: "var(--foreground)" }}>{item}</span>
           </motion.button>
         ))}
       </div>
@@ -99,7 +103,7 @@ export function MenuGrid() {
                       {dish.price}
                     </span>
                   </div>
-                  <p className="text-sm leading-relaxed text-black/70 dark:text-white/70">
+                  <p className="text-sm leading-relaxed text-black dark:text-white/70">
                     {dish.description}
                   </p>
                 </div>
