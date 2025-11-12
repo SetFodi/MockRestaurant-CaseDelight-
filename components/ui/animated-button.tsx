@@ -25,9 +25,9 @@ export function AnimatedButton({
     primary:
       "bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40",
     secondary:
-      "glass-panel text-white border border-white/20 hover:border-white/40",
+      "glass-panel border text-black dark:text-white border-black/10 dark:border-white/20 hover:border-black/30 dark:hover:border-white/40",
     ghost:
-      "bg-transparent text-white/80 hover:text-white hover:bg-white/10 border border-transparent",
+      "bg-transparent text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10 border border-transparent",
   };
 
   const hoverAnimation = prefersReducedMotion

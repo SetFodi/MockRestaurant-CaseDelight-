@@ -92,7 +92,7 @@ export function Navbar() {
           <ThemeToggle />
           <motion.a
             href="#reservations"
-            className="glass-panel rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/90 transition"
+            className="glass-panel rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-black dark:text-white transition"
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.96 }}
           >

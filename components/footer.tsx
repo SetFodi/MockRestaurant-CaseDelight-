@@ -1,4 +1,5 @@
 import Link from "next/link";
+import clsx from "clsx";
 import { Instagram, Facebook, Phone, Mail, ArrowUpRight } from "lucide-react";
 
 const social = [
@@ -36,18 +37,34 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-6 lg:items-end">
           <div className="grid grid-cols-2 gap-4 text-sm text-white/70 sm:grid-cols-4">
-            {social.map(({ href, label, icon: Icon }) => (
-              <Link
-                key={label}
-                href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noreferrer" : undefined}
-                className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-3 transition hover:border-white/30 hover:bg-white/10"
-              >
-                <Icon className="h-4 w-4" />
-                <span className="text-xs uppercase tracking-[0.2em]">{label}</span>
-              </Link>
-            ))}
+            {social.map(({ href, label, icon: Icon }) => {
+              const isExternal = href.startsWith("http");
+              const isEmail = label.includes("@");
+              return (
+                <Link
+                  key={label}
+                  href={href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noreferrer" : undefined}
+                  className={clsx(
+                    "flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-3 transition hover:border-white/30 hover:bg-white/10",
+                    "min-w-0",
+                    isEmail && "col-span-2 sm:col-span-2"
+                  )}
+                >
+                  <Icon className="h-4 w-4 shrink-0" />
+                  <span
+                    className={clsx(
+                      "text-xs uppercase tracking-[0.2em]",
+                      isEmail ? "break-words" : "truncate"
+                    )}
+                    title={label}
+                  >
+                    {label}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
           <p className="text-xs uppercase tracking-[0.28em] text-white/50">
             © {new Date().getFullYear()} Casa Delight. Crafted for connoisseurs.

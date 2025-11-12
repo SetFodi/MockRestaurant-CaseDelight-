@@ -34,7 +34,7 @@ export function ThemeToggle() {
         setTimeout(() => setToggling(false), prefersReducedMotion ? 0 : 240);
       }}
       className={clsx(
-        "relative inline-flex h-11 w-20 items-center rounded-full border border-white/25 px-1",
+        "relative inline-flex h-10 w-16 items-center rounded-full border border-white/25 px-1 sm:h-11 sm:w-20",
         "backdrop-blur-xl glass-panel transition-all duration-300 ease-out",
         "shadow-lg shadow-black/10 dark:shadow-black/30"
       )}
@@ -63,14 +63,8 @@ export function ThemeToggle() {
           <Sun className="h-4 w-4" />
         )}
       </motion.span>
-      <span className="relative z-10 flex w-1/2 items-center justify-center text-xs font-medium uppercase tracking-[0.16em] text-zinc-700 dark:text-zinc-200">
-        <Sun className="mr-1 h-3.5 w-3.5" />
-        <span className="hidden sm:inline">Day</span>
-      </span>
-      <span className="relative z-10 flex w-1/2 items-center justify-center text-xs font-medium uppercase tracking-[0.16em] text-zinc-700 dark:text-zinc-200">
-        <Moon className="mr-1 h-3.5 w-3.5" />
-        <span className="hidden sm:inline">Night</span>
-      </span>
+      <span className="relative z-10 flex w-1/2 items-center justify-center text-xs font-medium uppercase tracking-[0.16em] text-zinc-700 dark:text-zinc-200" aria-hidden />
+      <span className="relative z-10 flex w-1/2 items-center justify-center text-xs font-medium uppercase tracking-[0.16em] text-zinc-700 dark:text-zinc-200" aria-hidden />
     </motion.button>
   );
 }

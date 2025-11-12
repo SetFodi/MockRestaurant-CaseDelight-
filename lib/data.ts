@@ -32,7 +32,7 @@ export const dishes: Dish[] = [
     price: "29 ₾",
     category: "Starters",
     image:
-      "https://images.unsplash.com/photo-1514516430032-7f40ed9868a6?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Svaneti Beet Tartare",

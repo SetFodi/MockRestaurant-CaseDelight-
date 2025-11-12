@@ -33,11 +33,11 @@ export function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1] }}
           className="glass-panel glow-ring max-w-2xl px-8 py-10 text-balance shadow-2xl lg:px-10"
         >
-          <p className="eyebrow text-white/50">Tbilisi · Rustaveli Avenue</p>
-          <h1 className="section-heading mt-6 text-white">
+          <p className="eyebrow text-black/50 dark:text-white/50">Tbilisi · Rustaveli Avenue</p>
+          <h1 className="section-heading mt-6 text-black dark:text-white">
             Taste the Art of Fine Dining
           </h1>
-          <p className="description mt-4 text-white/80">
+          <p className="description mt-4 text-black/80 dark:text-white/80">
             A cinematic culinary house celebrating Georgian heritage through
             modern craftsmanship. Every seating becomes a multi-sensory story
             guided by Chef Elene Mdivani and our wine artisans.
@@ -49,7 +49,7 @@ export function Hero() {
             <AnimatedButton
               href="/menu"
               variant="secondary"
-              className="text-white"
+              className=""
             >
               Explore the Menu
             </AnimatedButton>
@@ -88,12 +88,12 @@ export function Hero() {
                     ? undefined
                     : { scale: 1.02, translateY: -4 }
                 }
-                className="glass-panel flex h-full flex-col gap-2 rounded-3xl border border-white/15 bg-white/10 p-5 text-white/80 backdrop-blur"
+                className="glass-panel flex h-full flex-col gap-2 rounded-3xl border border-white/15 bg-white/10 p-5 text-black/80 dark:text-white/80 backdrop-blur"
               >
                 <p className="text-xs uppercase tracking-[0.28em] text-amber-200/90">
                   {item.label}
                 </p>
-                <p className="text-base font-semibold text-white">
+                <p className="text-base font-semibold text-black dark:text-white">
                   {item.detail}
                 </p>
               </motion.div>

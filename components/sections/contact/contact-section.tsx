@@ -140,7 +140,7 @@ function Field({ label, name, type, required }: FieldProps) {
         name={name}
         type={type}
         required={required}
-        className="mt-2 rounded-xl border border-black/10 bg-white/70 px-4 py-3 text-sm text-black/80 shadow-inner outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-300/40 dark:border-white/15 dark:bg-black/40 dark:text-white/80"
+        className="mt-2 w-full rounded-xl border border-black/10 bg-white/70 px-4 py-3 text-sm text-black/80 shadow-inner outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-300/40 dark:border-white/15 dark:bg-black/40 dark:text-white/80"
       />
     </div>
   );
@@ -157,16 +157,18 @@ function ContactDetail({ icon, title, value, href }: ContactDetailProps) {
   return (
     <a
       href={href}
-      className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/40 px-4 py-3 text-sm text-black/70 transition hover:border-amber-400 hover:bg-white/60 dark:border-white/10 dark:bg-black/40 dark:text-white/70 dark:hover:border-amber-300"
+      className="flex items-center gap-3 overflow-hidden rounded-2xl border border-white/15 bg-white/40 px-4 py-3 text-sm text-black/70 transition hover:border-amber-400 hover:bg-white/60 dark:border-white/10 dark:bg-black/40 dark:text-white/70 dark:hover:border-amber-300"
     >
       <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-200/40 text-amber-700 dark:bg-amber-400/20 dark:text-amber-200">
         {icon}
       </span>
-      <div>
+      <div className="min-w-0">
         <p className="text-xs uppercase tracking-[0.28em] text-black/50 dark:text-white/50">
           {title}
         </p>
-        <p className="font-medium text-black/80 dark:text-white/80">{value}</p>
+        <p className="truncate font-medium text-black/80 dark:text-white/80" title={value}>
+          {value}
+        </p>
       </div>
     </a>
   );
